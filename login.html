@@ -240,5 +240,22 @@
 
     <!-- كود الجافاسكربت الخاص بصفحة تسجيل الدخول -->
     <script src="login.js"></script>
+
+
+
+
+    <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(registration => {
+        console.log("Masareefi PWA Ready");
+      })
+      .catch(error => {
+        console.error("PWA Error:", error);
+      });
+  });
+}
+</script>
 </body>
 </html>
